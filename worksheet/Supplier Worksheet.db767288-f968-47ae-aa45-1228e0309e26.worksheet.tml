@@ -1,0 +1,110 @@
+guid: db767288-f968-47ae-aa45-1228e0309e26
+worksheet:
+  name: Supplier Worksheet
+  tables:
+  - name: PRODUCT
+    fqn: 7c9d6e4d-cee4-4d03-a062-62e26804ac02
+  - name: PRODUCTCATEGORY
+    fqn: c1a32849-6e99-428e-abef-39f273b2cd95
+  - name: PURCHASETRANSACTIONS
+    fqn: 7f7880b9-b311-4eb2-a6d3-5d053b50b724
+  - name: SUPPLY
+    fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
+  joins:
+  - name: Mapping between PRODUCTCATEGORY and PRODUCT
+    source: PRODUCT
+    destination: PRODUCTCATEGORY
+    type: INNER
+    is_one_to_one: false
+  - name: Mapping between PRODUCT and PURCHASETRANSACTIONS
+    source: PURCHASETRANSACTIONS
+    destination: PRODUCT
+    type: INNER
+    is_one_to_one: false
+  - name: Mapping between SUPPLIER and PURCHASETRANSACTIONS
+    source: PURCHASETRANSACTIONS
+    destination: SUPPLY
+    type: INNER
+    is_one_to_one: false
+  table_paths:
+  - id: PRODUCT_1
+    table: PRODUCT
+    join_path:
+    - join:
+      - Mapping between PRODUCT and PURCHASETRANSACTIONS
+  - id: PRODUCTCATEGORY_1
+    table: PRODUCTCATEGORY
+    join_path:
+    - join:
+      - Mapping between PRODUCT and PURCHASETRANSACTIONS
+      - Mapping between PRODUCTCATEGORY and PRODUCT
+  - id: PURCHASETRANSACTIONS_1
+    table: PURCHASETRANSACTIONS
+  - id: SUPPLY_1
+    table: SUPPLY
+    join_path:
+    - join:
+      - Mapping between SUPPLIER and PURCHASETRANSACTIONS
+  formulas:
+  - name: is_us_company
+    expr: "if ( [SUPPLY_1::COMPANY_NAME] = 'united states' ) then true else false"
+    was_auto_generated: false
+  - name: qualified product name
+    expr: "concat ( concat ( concat ( concat ( [SUPPLY_1::COMPANY_NAME] , '_' ) , [PRODUCT_1::Product Group_NAME] ) , '_' ) , [PRODUCT_1::PRODUCT_NAME] )"
+    was_auto_generated: false
+  worksheet_columns:
+  - name: Product Group KEY
+    column_id: PRODUCT_1::Product Group_KEY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Product Category
+    column_id: PRODUCTCATEGORY_1::Product Category
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: COMPANY NAME
+    column_id: SUPPLY_1::COMPANY_NAME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: COMPANY KEY
+    column_id: SUPPLY_1::COMPANY_KEY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: COUNTRY NAME
+    column_id: SUPPLY_1::COUNTRY_NAME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Product Group
+    column_id: PRODUCTCATEGORY_1::Product Group
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: PREVUNITCOST
+    column_id: PURCHASETRANSACTIONS_1::PREVUNITCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: ITEMCOUNT
+    column_id: PURCHASETRANSACTIONS_1::ITEMCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Is us company
+    formula_id: is_us_company
+    properties:
+      column_type: ATTRIBUTE
+  - name: Qualified product name
+    formula_id: qualified product name
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: true

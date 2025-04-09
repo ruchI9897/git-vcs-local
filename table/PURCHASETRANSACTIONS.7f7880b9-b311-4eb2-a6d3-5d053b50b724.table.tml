@@ -1,0 +1,305 @@
+guid: 7f7880b9-b311-4eb2-a6d3-5d053b50b724
+table:
+  name: PURCHASETRANSACTIONS
+  db: SUPPLYCHAIN_MAIN
+  schema: PUBLIC
+  db_table: PURCHASETRANSACTIONS
+  connection:
+    name: SnowflakeConnection
+    fqn: 46030ea3-ecba-4cbf-a02c-c2ef5d5f29f1
+  columns:
+  - name: PURCHID
+    db_column_name: PURCHID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: LINENUM
+    db_column_name: LINENUM
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: ITEMID
+    db_column_name: ITEMID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ORDERACCOUNT
+    db_column_name: ORDERACCOUNT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: INVOICEACCOUNT
+    db_column_name: INVOICEACCOUNT
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CREATEDDATETIME
+    db_column_name: CREATEDDATETIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: ORDERPLACER
+    db_column_name: ORDERPLACER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: RECID
+    db_column_name: RECID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: PURCHSTATUS
+    db_column_name: PURCHSTATUS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: QTYORDERED
+    db_column_name: QTYORDERED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: QTYRECEIVED
+    db_column_name: QTYRECEIVED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: LINEAMOUNT
+    db_column_name: LINEAMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: ONTIMEDELIVEREDQTY
+    db_column_name: ONTIMEDELIVEREDQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: EARLYDAYS
+    db_column_name: EARLYDAYS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: EARLY
+    db_column_name: EARLY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LATEDAYS
+    db_column_name: LATEDAYS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: LATE
+    db_column_name: LATE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: EARLYLATEDETERMINATE
+    db_column_name: EARLYLATEDETERMINATE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: FULLSHIPMENTQTY
+    db_column_name: FULLSHIPMENTQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: PARTIALSHIPMENTQTY
+    db_column_name: PARTIALSHIPMENTQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: ONTIMEFULLDELIVEREDQTY
+    db_column_name: ONTIMEFULLDELIVEREDQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: ONTIMEPARTIALDELIVEREDQTY
+    db_column_name: ONTIMEPARTIALDELIVEREDQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: ACCEPTQTY
+    db_column_name: ACCEPTQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: REJECTQTY
+    db_column_name: REJECTQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: LEADTIME
+    db_column_name: LEADTIME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DATEDELIVERED
+    db_column_name: DATEDELIVERED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: ORIGREQUESTEDDLV
+    db_column_name: ORIGREQUESTEDDLV
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: EARLYQTY
+    db_column_name: EARLYQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: LATEQTY
+    db_column_name: LATEQTY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: CURUNITCOST
+    db_column_name: CURUNITCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: PREVUNITCOST
+    db_column_name: PREVUNITCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: EPPV
+    db_column_name: EPPV
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: EPPVPARTPERCENT
+    db_column_name: EPPVPARTPERCENT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: AGECLASS
+    db_column_name: AGECLASS
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: OPENCLOSED
+    db_column_name: OPENCLOSED
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: ITEMCOUNT
+    db_column_name: ITEMCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  joins_with:
+  - name: Mapping between PRODUCT and PURCHASETRANSACTIONS
+    destination:
+      name: PRODUCT
+      fqn: 7c9d6e4d-cee4-4d03-a062-62e26804ac02
+    "on": "[PURCHASETRANSACTIONS::ITEMID] = [PRODUCT::PRODUCT_KEY]"
+    type: INNER
+  - name: Mapping between SUPPLIER and PURCHASETRANSACTIONS
+    destination:
+      name: SUPPLY
+      fqn: 4b8896eb-4c83-40f9-be54-c8164326958e
+    "on": "[PURCHASETRANSACTIONS::ORDERACCOUNT] = [SUPPLY::COMPANY_KEY]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: true
