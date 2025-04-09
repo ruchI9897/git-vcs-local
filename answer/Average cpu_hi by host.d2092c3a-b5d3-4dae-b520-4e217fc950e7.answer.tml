@@ -1,0 +1,35 @@
+guid: d2092c3a-b5d3-4dae-b520-4e217fc950e7
+answer:
+  name: Average cpu_hi by host
+  tables:
+  - id: Falcon_Monitor_System_Stats_360
+    name: Falcon_Monitor_System_Stats_360
+    fqn: b664a50a-a46d-4f69-a985-96f1e3b6988d
+  search_query: "[cpu_hi] [host]"
+  answer_columns:
+  - name: Average cpu_hi
+  - name: host
+  table:
+    table_columns:
+    - column_id: Average cpu_hi
+      headline_aggregation: TABLE_AGGR
+    - column_id: host
+      headline_aggregation: COUNT_DISTINCT
+    ordered_column_ids:
+    - host
+    - Average cpu_hi
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Average cpu_hi
+    - column_id: host
+    axis_configs:
+    - x:
+      - host
+      "y":
+      - Average cpu_hi
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"host\",\"columnProperty\": {}},{\"columnId\": \"Average cpu_hi\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"5cf7851f-f6dc-4b31-b84e-b02b58d8e153\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average cpu_hi\"],\"isOpposite\": false}},{\"id\": \"5ba5e300-f7f6-4cf8-bfb0-cf4f373b2123\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"host\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Average cpu_hi\",\"color\": \"#FCC838\"}]}"
+  display_mode: CHART_MODE
