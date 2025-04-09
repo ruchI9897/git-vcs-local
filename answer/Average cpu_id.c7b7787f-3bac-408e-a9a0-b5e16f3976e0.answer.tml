@@ -1,0 +1,28 @@
+guid: c7b7787f-3bac-408e-a9a0-b5e16f3976e0
+answer:
+  name: Average cpu_id
+  tables:
+  - id: Falcon_Monitor_System_Stats_360
+    name: Falcon_Monitor_System_Stats_360
+    fqn: b664a50a-a46d-4f69-a985-96f1e3b6988d
+  search_query: "[cpu_id] [timestamp].'last day'"
+  answer_columns:
+  - name: Average cpu_id
+  table:
+    table_columns:
+    - column_id: Average cpu_id
+      headline_aggregation: TABLE_AGGR
+    ordered_column_ids:
+    - Average cpu_id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Average cpu_id
+    axis_configs:
+    - "y":
+      - Average cpu_id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Average cpu_id\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"f856daee-05a7-4d73-8a72-fccbb54cbfc3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average cpu_id\"],\"isOpposite\": false}},{\"id\": \"d1ad91bb-724a-4a60-901e-e8d0de289696\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
