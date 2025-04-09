@@ -5,7 +5,7 @@ answer:
   - id: Supplier Worksheet
     name: Supplier Worksheet
     fqn: db767288-f968-47ae-aa45-1228e0309e26
-  search_query: "[ITEMCOUNT] [PREVUNITCOST] = 100.0"
+  search_query: "[ITEMCOUNT]"
   answer_columns:
   - name: Total ITEMCOUNT
   table:
