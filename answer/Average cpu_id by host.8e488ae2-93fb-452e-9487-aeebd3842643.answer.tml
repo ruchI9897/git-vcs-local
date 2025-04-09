@@ -1,0 +1,35 @@
+guid: 8e488ae2-93fb-452e-9487-aeebd3842643
+answer:
+  name: Average cpu_id by host
+  tables:
+  - id: Falcon_Monitor_System_Stats_360
+    name: Falcon_Monitor_System_Stats_360
+    fqn: b664a50a-a46d-4f69-a985-96f1e3b6988d
+  search_query: "[host] [cpu_id]"
+  answer_columns:
+  - name: Average cpu_id
+  - name: host
+  table:
+    table_columns:
+    - column_id: Average cpu_id
+      headline_aggregation: TABLE_AGGR
+    - column_id: host
+      headline_aggregation: COUNT_DISTINCT
+    ordered_column_ids:
+    - host
+    - Average cpu_id
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: Average cpu_id
+    - column_id: host
+    axis_configs:
+    - x:
+      - host
+      "y":
+      - Average cpu_id
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"host\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"Average cpu_id\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"28658848-8116-4986-8b79-cc4f7881b59f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Average cpu_id\"],\"isOpposite\": false}},{\"id\": \"8a895667-d347-416f-87a5-1142929ca32d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"host\"]}}],\"systemSeriesColors\": [{\"serieName\": \"7d183cb9-b245-43c7-944d-a7b6dfe295c1\",\"color\": \"#FCC838\"},{\"serieName\": \"Average cpu_id\",\"color\": \"#FCC838\"}]}"
+  display_mode: TABLE_MODE
