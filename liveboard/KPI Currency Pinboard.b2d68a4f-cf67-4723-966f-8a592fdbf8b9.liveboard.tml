@@ -53,6 +53,13 @@ liveboard:
       display_mode: CHART_MODE
     viz_guid: 247574e4-3577-4dd9-9994-8479eb0291f6
   layout:
-    tiles:
-    - visualization_id: Viz_1
-      size: LARGE
+    tabs:
+    - name: KPI
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 12
+      id: ea0bd50c-e119-4bd7-8126-63f42d73fb62
