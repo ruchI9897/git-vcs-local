@@ -31,6 +31,7 @@ liveboard:
         - Total Revenue
         - Total Sales
         client_state: "{\"dataOffset\":0.0,\"wrapTableHeader\":true}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Tea\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}},{\"columnId\": \"Total Revenue\",\"columnProperty\": {}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}}]}"
       chart:
         type: COLUMN
         chart_columns:
@@ -50,16 +51,13 @@ liveboard:
           - Total Revenue
           - Total Sales
         client_state: "{\"systemMultiColorSeriesColors\":{},\"multiColorSeriesColors\":{},\"seriesColors\":{\"Total Revenue\":\"#a174c1\"},\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"85e60979-5d8c-442c-8c8f-c9ebe35d3014\":{\"linkedColumns\":[\"Total Revenue\"],\"axisType\":\"Y\",\"isOpposite\":false},\"d9008ca8-b3da-481f-9589-56f1a3972fc4\":{\"linkedColumns\":[\"Total Sales\"],\"axisType\":\"Y\",\"isOpposite\":true},\"a74dbfd6-dc7c-4f37-a836-4df095302d91\":{\"linkedColumns\":[\"Currency Code\"],\"axisType\":\"X\"}},\"systemSeriesColors\":{\"Total Revenue\":\"#a174c1\",\"Total Sales\":\"#e3394a\"},\"yAxisShared\":false,\"visibleSeriesNames\":[\"Total Revenue\",\"Total Sales\"],\"version\":\"V2.1\",\"columnProperties\":{\"Tea\":{},\"Currency Code\":{},\"Total Revenue\":{},\"Total Sales\":{}}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Total Revenue\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"500\",\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {\"color\": \"#0500ff\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]}}},{\"columnId\": \"Total Sales\",\"columnProperty\": {}},{\"columnId\": \"Currency Code\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"85e60979-5d8c-442c-8c8f-c9ebe35d3014\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Revenue\"],\"isOpposite\": false}},{\"id\": \"d9008ca8-b3da-481f-9589-56f1a3972fc4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Sales\"],\"isOpposite\": true}},{\"id\": \"a74dbfd6-dc7c-4f37-a836-4df095302d91\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Currency Code\"]}}],\"seriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Revenue\",\"color\": \"#a174c1\"},{\"serieName\": \"Total Sales\",\"color\": \"#e3394a\"}]}"
       display_mode: CHART_MODE
     viz_guid: 247574e4-3577-4dd9-9994-8479eb0291f6
   layout:
-    tabs:
-    - name: KPI
-      description: ""
-      tiles:
-      - visualization_id: Viz_1
-        x: 0
-        "y": 0
-        height: 8
-        width: 12
-      id: ea0bd50c-e119-4bd7-8126-63f42d73fb62
+    tiles:
+    - visualization_id: Viz_1
+      x: 0
+      "y": 0
+      height: 8
+      width: 12
