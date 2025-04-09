@@ -1,0 +1,35 @@
+guid: 79793e82-6792-4701-993e-2b2b0d63a96c
+answer:
+  name: Total ITEMCOUNT by COMPANY NAME
+  tables:
+  - id: Supplier Worksheet
+    name: Supplier Worksheet
+    fqn: db767288-f968-47ae-aa45-1228e0309e26
+  search_query: "[ITEMCOUNT] [COMPANY NAME]"
+  answer_columns:
+  - name: COMPANY NAME
+  - name: Total ITEMCOUNT
+  table:
+    table_columns:
+    - column_id: COMPANY NAME
+      headline_aggregation: COUNT_DISTINCT
+    - column_id: Total ITEMCOUNT
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - COMPANY NAME
+    - Total ITEMCOUNT
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: COMPANY NAME
+    - column_id: Total ITEMCOUNT
+    axis_configs:
+    - x:
+      - COMPANY NAME
+      "y":
+      - Total ITEMCOUNT
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"COMPANY NAME\",\"columnProperty\": {}},{\"columnId\": \"Total ITEMCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"07d45b62-8c98-4fd4-8e62-0923a490f0d5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total ITEMCOUNT\"],\"isOpposite\": false}},{\"id\": \"0e0254d8-b9ed-434b-89a1-7b594b5169c0\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"COMPANY NAME\"]}}]}"
+  display_mode: CHART_MODE
