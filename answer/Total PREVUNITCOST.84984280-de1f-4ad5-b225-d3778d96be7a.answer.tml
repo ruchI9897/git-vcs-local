@@ -24,5 +24,5 @@ answer:
     - "y":
       - Total PREVUNITCOST
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total PREVUNITCOST\",\"columnProperty\": {}},{\"columnId\": \"9adf008f-fcd8-4443-8827-ba1487d503b8\",\"columnProperty\": {}},{\"columnId\": \"f167cf23-2f82-4e9a-9261-2249364e860d\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2877c5f2-e66e-493b-bfda-52d0656bfbb6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total PREVUNITCOST\"],\"isOpposite\": false}},{\"id\": \"0108cf80-c03c-4d55-a834-5e85d45eefdd\",\"properties\": {\"axisType\": \"X\"}}]}"
-  display_mode: CHART_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total PREVUNITCOST\",\"columnProperty\": {}},{\"columnId\": \"4eecf19c-a773-4d82-b24c-31b67d8cce47\",\"columnProperty\": {}},{\"columnId\": \"c8b7fe8c-5f65-4712-89c1-3aeeaa33602c\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"2877c5f2-e66e-493b-bfda-52d0656bfbb6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total PREVUNITCOST\"],\"isOpposite\": false}},{\"id\": \"0108cf80-c03c-4d55-a834-5e85d45eefdd\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: TABLE_MODE
