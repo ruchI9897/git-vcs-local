@@ -87,15 +87,3 @@ liveboard:
         client_state: "{\"chartProperties\":{\"gridLines\":{},\"showRoundedNumbers\":true,\"chartSpecific\":{}},\"axisProperties\":{\"f17c3ade-79ff-4e8a-a9a4-b17dd2575d3c\":{\"linkedColumns\":[\"Total Part PartKey\"],\"axisType\":\"Y\",\"isOpposite\":false},\"2a879ebd-7290-4ac7-b554-78bc3b5bf43c\":{\"linkedColumns\":[\"Total ansinformula\"],\"axisType\":\"Y\",\"isOpposite\":true},\"34fb9dd3-77ea-45f5-91a2-9ddcb2a4993b\":{\"linkedColumns\":[\"Market Segment\",\"Customer Region\"],\"axisType\":\"X\"}},\"version\":\"V2.1\",\"columnProperties\":{\"Market Segment\":{},\"Customer Region\":{},\"Total Part PartKey\":{},\"Total ansinformula\":{}}}"
       display_mode: TABLE_MODE
     viz_guid: 9e30a3de-7074-40da-b8b1-c1ecfcac189d
-  layout:
-    tiles:
-    - visualization_id: Viz_1
-      x: 0
-      "y": 0
-      height: 8
-      width: 12
-    - visualization_id: Viz_2
-      x: 0
-      "y": 8
-      height: 8
-      width: 12
