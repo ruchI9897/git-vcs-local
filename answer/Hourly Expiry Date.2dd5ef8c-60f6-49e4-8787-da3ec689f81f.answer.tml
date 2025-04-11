@@ -1,0 +1,28 @@
+guid: 2dd5ef8c-60f6-49e4-8787-da3ec689f81f
+answer:
+  name: Hourly Expiry Date
+  tables:
+  - id: Credits Purchased
+    name: Credits Purchased
+    fqn: 82da8e20-4ed9-4dd1-be1f-a5d32aeec294
+  search_query: "[Expiry Date] [Expiry Date].hourly"
+  answer_columns:
+  - name: Hour(Expiry Date)
+  table:
+    table_columns:
+    - column_id: Hour(Expiry Date)
+      headline_aggregation: MIN-MAX
+    ordered_column_ids:
+    - Hour(Expiry Date)
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Hour(Expiry Date)
+    axis_configs:
+    - "y":
+      - Hour(Expiry Date)
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Hour(Expiry Date)\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"67023e90-6eaf-41f4-b880-c16bb5b0b445\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Hour(Expiry Date)\"],\"isOpposite\": false}},{\"id\": \"b68ef2fa-8195-4c4a-9304-dfdd58ccbe12\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: TABLE_MODE
