@@ -25,5 +25,5 @@ answer:
     - "y":
       - Hour(Expiry Date)
     client_state: ""
-    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Hour(Expiry Date)\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"67023e90-6eaf-41f4-b880-c16bb5b0b445\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Hour(Expiry Date)\"],\"isOpposite\": false}},{\"id\": \"b68ef2fa-8195-4c4a-9304-dfdd58ccbe12\",\"properties\": {\"axisType\": \"X\"}}]}"
-  display_mode: CHART_MODE
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Hour(Expiry Date)\",\"columnProperty\": {}},{\"columnId\": \"5351a01c-d84a-4a43-b4a9-8886d52f6843\",\"columnProperty\": {}},{\"columnId\": \"9302b250-959a-42f1-a858-23cf1d8e0a97\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"67023e90-6eaf-41f4-b880-c16bb5b0b445\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Hour(Expiry Date)\"],\"isOpposite\": false}},{\"id\": \"b68ef2fa-8195-4c4a-9304-dfdd58ccbe12\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: TABLE_MODE
