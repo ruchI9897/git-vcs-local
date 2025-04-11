@@ -1,0 +1,28 @@
+guid: 2e4298eb-1ea0-495f-83a7-7fcf60852bda
+answer:
+  name: Total Agency_Service Years
+  tables:
+  - id: Copy of agency - vcs
+    name: Copy of agency - vcs
+    fqn: b754e010-e0c7-4dd5-a283-f5fb55f390db
+  search_query: "[Agency_Service Years]"
+  answer_columns:
+  - name: Total Agency_Service Years
+  table:
+    table_columns:
+    - column_id: Total Agency_Service Years
+      headline_aggregation: SUM
+    ordered_column_ids:
+    - Total Agency_Service Years
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: KPI
+    chart_columns:
+    - column_id: Total Agency_Service Years
+    axis_configs:
+    - "y":
+      - Total Agency_Service Years
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Agency_Service Years\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"dbd0e005-fa78-47c9-a5d3-b5778b28f6b2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Agency_Service Years\"],\"isOpposite\": false}},{\"id\": \"2f2c8ed9-3ae0-4726-98b7-27760f8762d4\",\"properties\": {\"axisType\": \"X\"}}]}"
+  display_mode: CHART_MODE
