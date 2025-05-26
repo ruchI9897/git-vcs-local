@@ -1,0 +1,35 @@
+guid: 496a4031-2d83-44f8-8ff7-32c44ba62202
+answer:
+  name: Total Credit Window Rank by API
+  tables:
+  - id: Credit Usage Worksheet
+    name: Credit Usage Worksheet
+    fqn: 965b5f46-7162-4c16-8aac-7ab26f313b25
+  search_query: "[Credit Window Rank] [API]"
+  answer_columns:
+  - name: API
+  - name: Total Credit Window Rank
+  table:
+    table_columns:
+    - column_id: API
+      show_headline: false
+    - column_id: Total Credit Window Rank
+      show_headline: false
+    ordered_column_ids:
+    - API
+    - Total Credit Window Rank
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: API
+    - column_id: Total Credit Window Rank
+    axis_configs:
+    - x:
+      - API
+      "y":
+      - Total Credit Window Rank
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Credit Window Rank\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"API\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e0239ff8-cc9f-4d44-9dfa-fcaaa6b89728\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Credit Window Rank\"],\"isOpposite\": false}},{\"id\": \"7046035a-5780-4d77-87c8-61caeff537e5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"API\"]}}]}"
+  display_mode: CHART_MODE
