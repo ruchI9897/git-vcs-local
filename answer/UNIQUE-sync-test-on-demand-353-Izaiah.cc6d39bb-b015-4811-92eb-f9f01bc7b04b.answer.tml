@@ -1,0 +1,35 @@
+guid: cc6d39bb-b015-4811-92eb-f9f01bc7b04b
+answer:
+  name: UNIQUE-sync-test-on-demand-353-Izaiah
+  tables:
+  - id: UNIQUE-sync-test-on-demand-353_LINEORDER
+    name: UNIQUE-sync-test-on-demand-353_LINEORDER
+    fqn: eb0e3b3b-dde4-4d0a-9a1f-1deb58fe1f92
+  search_query: "[LO_SHIPMODE] [LO_SUPPLYCOST]"
+  answer_columns:
+  - name: LO_SHIPMODE
+  - name: Total LO_SUPPLYCOST
+  table:
+    table_columns:
+    - column_id: LO_SHIPMODE
+      show_headline: false
+    - column_id: Total LO_SUPPLYCOST
+      show_headline: false
+    ordered_column_ids:
+    - LO_SHIPMODE
+    - Total LO_SUPPLYCOST
+    client_state: ""
+    client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+  chart:
+    type: COLUMN
+    chart_columns:
+    - column_id: LO_SHIPMODE
+    - column_id: Total LO_SUPPLYCOST
+    axis_configs:
+    - x:
+      - LO_SHIPMODE
+      "y":
+      - Total LO_SUPPLYCOST
+    client_state: ""
+    client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_SUPPLYCOST\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"462ad0da-9666-4871-8acd-0b57b0876085\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_SUPPLYCOST\"],\"isOpposite\": false}},{\"id\": \"1c8508c0-d65c-4a85-9dbc-09feed5864f9\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total LO_SUPPLYCOST\",\"color\": \"#8C62F5\"}]}"
+  display_mode: CHART_MODE
