@@ -1,0 +1,141 @@
+guid: 6d6f2c33-0cf8-496d-ad23-4c90a10c203f
+table:
+  name: TS_SALES
+  db: NEBULADEV
+  schema: TPCH_COMPLEX_SCHEMA
+  db_table: TS_SALES
+  connection:
+    name: ts_complex_schema
+    fqn: a96e1cce-5beb-4023-a057-f8fa73a7bc6c
+  columns:
+  - name: SALE_ID
+    db_column_name: SALE_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: STORE_ID
+    db_column_name: STORE_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_DETAIL_ID
+    db_column_name: PRODUCT_DETAIL_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_ID
+    db_column_name: PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CUSTOMER_ID
+    db_column_name: CUSTOMER_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: ORDER_DATE
+    db_column_name: ORDER_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: ORDER_DATETIME
+    db_column_name: ORDER_DATETIME
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: SHIP_DATE
+    db_column_name: SHIP_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: SHIPMODE
+    db_column_name: SHIPMODE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: SALES_AMOUNT
+    db_column_name: SALES_AMOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: SALES_QUANTITY
+    db_column_name: SALES_QUANTITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: TAX
+    db_column_name: TAX
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: DISCOUNT_PCT
+    db_column_name: DISCOUNT_PCT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: NET_SALES
+    db_column_name: NET_SALES
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: TS_SALES_to_TS_CUSTOMER
+    destination:
+      name: TS_CUSTOMER
+      fqn: b1b4e283-ff5a-4eed-b7a1-900442f20ab6
+    "on": "[TS_SALES::CUSTOMER_ID] = [TS_CUSTOMER::CUSTOMER_ID]"
+    type: INNER
+  - name: TS_SALES_to_TS_DATE
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_SALES::ORDER_DATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_SALES_to_TS_DATE_1
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_SALES::SHIP_DATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_SALES_to_TS_PRODUCT_DETAILS
+    destination:
+      name: TS_PRODUCT_DETAILS
+      fqn: 457d8467-6440-4c46-99a3-41302914e9e7
+    "on": "[TS_SALES::PRODUCT_DETAIL_ID] = [TS_PRODUCT_DETAILS::PRODUCT_DETAIL_ID]"
+    type: INNER
+  - name: TS_SALES_to_TS_STORES
+    destination:
+      name: TS_STORES
+      fqn: 81fe888b-6825-4fa0-954a-bc3f4e48a150
+    "on": "[TS_SALES::STORE_ID] = [TS_STORES::STORE_ID]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: false

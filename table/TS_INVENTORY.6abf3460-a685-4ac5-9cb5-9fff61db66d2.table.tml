@@ -1,0 +1,141 @@
+guid: 6abf3460-a685-4ac5-9cb5-9fff61db66d2
+table:
+  name: TS_INVENTORY
+  db: NEBULADEV
+  schema: TPCH_COMPLEX_SCHEMA
+  db_table: TS_INVENTORY
+  connection:
+    name: ts_complex_schema
+    fqn: a96e1cce-5beb-4023-a057-f8fa73a7bc6c
+  columns:
+  - name: INVENTORY_ID
+    db_column_name: INVENTORY_ID
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: VARCHAR
+  - name: STORE_ID
+    db_column_name: STORE_ID
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_DETAIL_ID
+    db_column_name: PRODUCT_DETAIL_ID
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: VARCHAR
+  - name: PRODUCT_ID
+    db_column_name: PRODUCT_ID
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: VARCHAR
+  - name: QUANTITY_INSTOCK
+    db_column_name: QUANTITY_INSTOCK
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: INT64
+  - name: INVENTORY_VALUE
+    db_column_name: INVENTORY_VALUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: INT64
+  - name: DATE_ADDED
+    db_column_name: DATE_ADDED
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: DATE
+  - name: LAST_REORDERDATE
+    db_column_name: LAST_REORDERDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: DATE
+  - name: EXPIRATION_DATE
+    db_column_name: EXPIRATION_DATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - ""
+      custom_order:
+      - ""
+    db_column_properties:
+      data_type: DATE
+  joins_with:
+  - name: TS_INVENTORY_to_TS_DATE
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_INVENTORY::DATE_ADDED] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_INVENTORY_to_TS_DATE_1
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_INVENTORY::LAST_REORDERDATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_INVENTORY_to_TS_DATE_2
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_INVENTORY::EXPIRATION_DATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_INVENTORY_to_TS_PRODUCT_DETAILS
+    destination:
+      name: TS_PRODUCT_DETAILS
+      fqn: 457d8467-6440-4c46-99a3-41302914e9e7
+    "on": "[TS_INVENTORY::PRODUCT_DETAIL_ID] = [TS_PRODUCT_DETAILS::PRODUCT_DETAIL_ID]"
+    type: INNER
+  - name: TS_INVENTORY_to_TS_STORES
+    destination:
+      name: TS_STORES
+      fqn: 81fe888b-6825-4fa0-954a-bc3f4e48a150
+    "on": "[TS_INVENTORY::STORE_ID] = [TS_STORES::STORE_ID]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: false

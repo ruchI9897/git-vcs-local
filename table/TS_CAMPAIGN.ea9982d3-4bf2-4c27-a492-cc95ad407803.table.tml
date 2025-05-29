@@ -1,0 +1,78 @@
+guid: ea9982d3-4bf2-4c27-a492-cc95ad407803
+table:
+  name: TS_CAMPAIGN
+  db: NEBULADEV
+  schema: TPCH_COMPLEX_SCHEMA
+  db_table: TS_CAMPAIGN
+  connection:
+    name: ts_complex_schema
+    fqn: a96e1cce-5beb-4023-a057-f8fa73a7bc6c
+  columns:
+  - name: CAMPAIGN_ID
+    db_column_name: CAMPAIGN_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CUSTOMER_ID
+    db_column_name: CUSTOMER_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGN_STARTDATE
+    db_column_name: CAMPAIGN_STARTDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: CAMPAIGN_ENDDATE
+    db_column_name: CAMPAIGN_ENDDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: CAMPAIGN_CHANNEL
+    db_column_name: CAMPAIGN_CHANNEL
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: CAMPAIGN_STATUS
+    db_column_name: CAMPAIGN_STATUS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: BUDGET
+    db_column_name: BUDGET
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  joins_with:
+  - name: TS_CAMPAIGN_to_TS_CUSTOMER
+    destination:
+      name: TS_CUSTOMER
+      fqn: b1b4e283-ff5a-4eed-b7a1-900442f20ab6
+    "on": "[TS_CAMPAIGN::CUSTOMER_ID] = [TS_CUSTOMER::CUSTOMER_ID]"
+    type: INNER
+  - name: TS_CAMPAIGN_to_TS_DATE
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_CAMPAIGN::CAMPAIGN_STARTDATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  - name: TS_CAMPAIGN_to_TS_DATE_1
+    destination:
+      name: TS_DATE
+      fqn: 24be6ccb-a7d2-4b5a-a933-10c0e25fc02b
+    "on": "[TS_CAMPAIGN::CAMPAIGN_ENDDATE] = [TS_DATE::DATEKEY]"
+    type: INNER
+  properties:
+    sage_config:
+      is_sage_enabled: false

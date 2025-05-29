@@ -1,0 +1,55 @@
+guid: b1b4e283-ff5a-4eed-b7a1-900442f20ab6
+table:
+  name: TS_CUSTOMER
+  db: NEBULADEV
+  schema: TPCH_COMPLEX_SCHEMA
+  db_table: TS_CUSTOMER
+  connection:
+    name: ts_complex_schema
+    fqn: a96e1cce-5beb-4023-a057-f8fa73a7bc6c
+  columns:
+  - name: CUSTOMER_ID
+    db_column_name: CUSTOMER_ID
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: AGE
+    db_column_name: AGE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: GENDER
+    db_column_name: GENDER
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: INCOME
+    db_column_name: INCOME
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: HOUSEHOLD_SIZE
+    db_column_name: HOUSEHOLD_SIZE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: MARITAL_STATUS
+    db_column_name: MARITAL_STATUS
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    sage_config:
+      is_sage_enabled: false
