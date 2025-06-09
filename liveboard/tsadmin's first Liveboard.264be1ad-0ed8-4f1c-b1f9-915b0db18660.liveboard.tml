@@ -1,0 +1,54 @@
+guid: 264be1ad-0ed8-4f1c-b1f9-915b0db18660
+liveboard:
+  name: tsadmin's first Liveboard
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total quantity purchased, Total sales by item type, Monthly date"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] [sales] [item type] [date] [date].monthly"
+      answer_columns:
+      - name: Month(date)
+      - name: Total quantity purchased
+      - name: Total sales
+      - name: item type
+      table:
+        table_columns:
+        - column_id: Month(date)
+          show_headline: false
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: Total sales
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        ordered_column_ids:
+        - item type
+        - Month(date)
+        - Total quantity purchased
+        - Total sales
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(date)
+        - column_id: Total quantity purchased
+        - column_id: Total sales
+        - column_id: item type
+        axis_configs:
+        - x:
+          - Month(date)
+          "y":
+          - Total quantity purchased
+          - Total sales
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"item type\",\"columnProperty\": {}},{\"columnId\": \"Month(date)\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Total sales\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"e3cb8a33-82c3-4ed5-9f91-d60c415cfe5f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"79381338-96d4-4451-a210-a079d623bb2d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total sales\"],\"isOpposite\": true}},{\"id\": \"da0c58be-fab2-42c7-8968-9ef6f004943c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total quantity purchased\",\"color\": \"#2E75F0\"},{\"serieName\": \"Total sales\",\"color\": \"#48D1E0\"}]}"
+      display_mode: TABLE_MODE
+    viz_guid: feae5df9-a3a9-4c01-8b6e-4dac114121ad
+  layout:
+    tiles:
+    - visualization_id: Viz_1
