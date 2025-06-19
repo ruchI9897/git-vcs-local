@@ -1,0 +1,126 @@
+guid: 2dfb1d9a-2cc7-48ad-ad11-6c0925033c52
+worksheet:
+  name: My Worksheet
+  description: "The worksheet named \"My Worksheet\" contains a comprehensive set of data attributes related to orders, including details about customers, suppliers, and shipping. It captures financial aspects such as prices, discounts, taxes, and total revenue generated. Additionally, it includes information on order priorities, shipping modes, and line item specifics, which can be used to analyze and optimize order processing and fulfillment strategies. (AI generated)"
+  tables:
+  - name: LINEORDER
+    fqn: e365c052-7561-4818-a688-c01331f89d04
+  table_paths:
+  - id: LINEORDER_1
+    table: LINEORDER
+  worksheet_columns:
+  - name: LO_ORDERKEY
+    column_id: LINEORDER_1::LO_ORDERKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_SHIPMODE
+    column_id: LINEORDER_1::LO_SHIPMODE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      is_hidden: true
+      is_mandatory_token_filter: true
+  - name: LO_LINENUMBER
+    column_id: LINEORDER_1::LO_LINENUMBER
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_CUSTKEY
+    column_id: LINEORDER_1::LO_CUSTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_PARTKEY
+    column_id: LINEORDER_1::LO_PARTKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_SUPPKEY
+    column_id: LINEORDER_1::LO_SUPPKEY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_ORDERDATE
+    column_id: LINEORDER_1::LO_ORDERDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: LO_ORDERPRIORITY
+    column_id: LINEORDER_1::LO_ORDERPRIORITY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: LO_SHIPPRIORITY
+    column_id: LINEORDER_1::LO_SHIPPRIORITY
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: LO_QUANTITY
+    column_id: LINEORDER_1::LO_QUANTITY
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_EXTENDEDPRICE
+    column_id: LINEORDER_1::LO_EXTENDEDPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_ORDTOTALPRICE
+    column_id: LINEORDER_1::LO_ORDTOTALPRICE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_DISCOUNT
+    column_id: LINEORDER_1::LO_DISCOUNT
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_REVENUE
+    column_id: LINEORDER_1::LO_REVENUE
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_SUPPLYCOST
+    column_id: LINEORDER_1::LO_SUPPLYCOST
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_TAX
+    column_id: LINEORDER_1::LO_TAX
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: LO_COMMITDATE
+    column_id: LINEORDER_1::LO_COMMITDATE
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    sage_config:
+      is_sage_enabled: true
+  parameters:
+  - id: f70c7317-2caa-468f-9cb7-2ce677f84fb6
+    name: ip
+    data_type: INT64
+    default_value: "3"
+    description: ""
+  - id: 975b623a-95ab-49b4-a8b3-6a4b52b290b1
+    name: str
+    data_type: CHAR
+    default_value: pp_testing
+    description: ""
