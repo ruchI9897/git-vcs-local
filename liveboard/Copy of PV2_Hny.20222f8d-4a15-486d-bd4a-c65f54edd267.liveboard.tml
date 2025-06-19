@@ -38,52 +38,6 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d62a3b6c-d20a-4b1b-abbc-81ed9877ecd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"e1b6552a-8575-41eb-ab91-894f66a80c3c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: d1112f3d-83a3-42af-8ec0-bcca1f7e380a
-  - id: Viz_2
-    answer:
-      name: Total LO_DISCOUNT by LO_SHIPMODE
-      tables:
-      - id: My Worksheet
-        name: My Worksheet
-        fqn: 2dfb1d9a-2cc7-48ad-ad11-6c0925033c52
-      search_query: "[LO_SHIPMODE] [LO_DISCOUNT]"
-      answer_columns:
-      - name: LO_SHIPMODE
-      - name: Total LO_DISCOUNT
-      table:
-        table_columns:
-        - column_id: LO_SHIPMODE
-          show_headline: false
-        - column_id: Total LO_DISCOUNT
-          show_headline: false
-        ordered_column_ids:
-        - LO_SHIPMODE
-        - Total LO_DISCOUNT
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}}]}"
-      chart:
-        type: ADVANCED_PIVOT_TABLE
-        chart_columns:
-        - column_id: LO_SHIPMODE
-        - column_id: Measure names
-          type: MEASURE_NAMES
-        - column_id: Total LO_DISCOUNT
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d62a3b6c-d20a-4b1b-abbc-81ed9877ecd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"e1b6552a-8575-41eb-ab91-894f66a80c3c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}]}"
-        custom_chart_config:
-        - key: basic
-          dimensions:
-          - key: rows
-            columns:
-            - LO_SHIPMODE
-          - key: values
-            columns:
-            - Total LO_DISCOUNT
-          - key: columns
-            columns:
-            - Measure names
-          - key: split-by-color
-      display_mode: CHART_MODE
-    viz_guid: 66e665e6-ad09-41e2-bee7-809ae3f71f1e
   layout:
     tiles:
     - visualization_id: Viz_1
