@@ -38,6 +38,58 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_DISCOUNT\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"d62a3b6c-d20a-4b1b-abbc-81ed9877ecd7\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total LO_DISCOUNT\"],\"isOpposite\": false}},{\"id\": \"e1b6552a-8575-41eb-ab91-894f66a80c3c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"LO_SHIPMODE\"]}}]}"
       display_mode: TABLE_MODE
     viz_guid: d1112f3d-83a3-42af-8ec0-bcca1f7e380a
+  - id: Viz_2
+    answer:
+      name: Total LO_REVENUE by LO_SHIPMODE and Measure names
+      tables:
+      - id: Hny_Model_June25
+        name: Hny_Model_June25
+        fqn: e9042abc-5fee-45af-ae05-63885459e76a
+      search_query: "[LO_SHIPMODE] [LO_REVENUE] [LO_QUANTITY]"
+      answer_columns:
+      - name: LO_SHIPMODE
+      - name: Total LO_QUANTITY
+      - name: Total LO_REVENUE
+      table:
+        table_columns:
+        - column_id: LO_SHIPMODE
+          show_headline: false
+        - column_id: Total LO_QUANTITY
+          show_headline: false
+        - column_id: Total LO_REVENUE
+          show_headline: false
+        ordered_column_ids:
+        - LO_SHIPMODE
+        - Total LO_REVENUE
+        - Total LO_QUANTITY
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: ADVANCED_PIVOT_TABLE
+        chart_columns:
+        - column_id: LO_SHIPMODE
+        - column_id: Measure names
+          type: MEASURE_NAMES
+        - column_id: Total LO_QUANTITY
+        - column_id: Total LO_REVENUE
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"149e1205-eb78-4636-a92f-7ae69adc2338\",\"sortBy\": \"value\",\"sortBySummaryField\": \"149e1205-eb78-4636-a92f-7ae69adc2338\",\"sortOrder\": \"\",\"expanded\": true,\"area\": \"column\"},{\"dataField\": \"LO_SHIPMODE\",\"sortBy\": \"value\",\"sortBySummaryField\": \"\",\"sortOrder\": \"\",\"expanded\": true,\"area\": \"row\"}]},\"isStackedAsPercent\": false,\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"LO_SHIPMODE\",\"columnProperty\": {}},{\"columnId\": \"Total LO_REVENUE\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"9cee4572-2b15-4873-bfa6-7621779b1e10\",\"properties\": {\"axisType\": \"X\"}}],\"systemSeriesColors\": [{\"serieName\": \"7e2c9f71-cff3-4fa0-8db1-7834b97bd111\",\"color\": \"#FF8142\"}]}"
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: rows
+            columns:
+            - LO_SHIPMODE
+          - key: values
+            columns:
+            - Total LO_REVENUE
+          - key: columns
+            columns:
+            - Measure names
+          - key: split-by-color
+        custom_visual_props: "{}"
+      display_mode: CHART_MODE
+    viz_guid: 7a7549a2-b4d5-4cbd-af55-f144301e979e
   layout:
     tiles:
     - visualization_id: Viz_1
